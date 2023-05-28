@@ -40,9 +40,9 @@ const PrinceCut: FC = ({ children }) => {
             <use fill='#314756' xlinkHref={'#' + path2}/>
             <HairColor maskID={mask2}/>
           </g>
+        </g>
           <FacialHair/>
           {children}
-        </g>
       </g>
     </g>
   )
