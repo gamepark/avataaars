@@ -1,6 +1,6 @@
 {
-  "name": "@gamepark/avataaars",
-  "version": "2.3.0",
+  "name": "@testpig/avataaars",
+  "version": "1.0.0",
   "description": "React component for avataaars ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,10 +8,11 @@
     "react",
     "avatar"
   ],
-  "repository": "git@github.com:gamepark/avataaars.git",
+  "repository": "git@github.com:testpig-io/avataaars.git",
   "contributors": [
     "Fang-Pen Lin <hello@fangpenlin.com>",
-    "Romain Fromi <romain@game-park.com>"
+    "Romain Fromi <romain@game-park.com>",
+    "Kerry McKeever <kerry@testpig.io>"
   ],
   "license": "MIT",
   "publishConfig": {
