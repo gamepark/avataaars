@@ -1,6 +1,6 @@
 {
   "name": "@gamepark/avataaars",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "description": "React component for avataaars ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
