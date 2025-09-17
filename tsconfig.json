@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "rootDir": "src",
+    "outDir": "dist",
     "jsx": "react-jsx",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "moduleResolution": "Node",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
@@ -12,8 +18,7 @@
     "noImplicitReturns": true,
     "esModuleInterop": true,
     "declaration": true,
-    "outDir": "./dist",
-    "lib": ["es6", "dom"]
   },
-  "types": ["jest", "node"]
+  "include": ["src"],
+  "exclude": ["**/*.test.ts"]
 }
