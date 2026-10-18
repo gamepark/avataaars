@@ -8,11 +8,29 @@ import Hoodie from './Hoodie'
 import CollarSweater from './CollarSweater'
 import BlazerSweater from './BlazerSweater'
 import Overall from './Overall'
-import { useContext } from 'react'
+import GameParkSweater from './GameParkSweater'
+import { Armor, ChefJacket, ChristmasSweater, FootballJersey, HawaiianShirt, Kimono, ShirtTie, StripedShirt, SuperheroSuit, Turtleneck, Tuxedo } from './NewClothes'
+import { FC, useContext } from 'react'
 import AvatarContext from '../AvatarContext'
+
+const newClothes: Partial<Record<ClotheType, FC>> = {
+  [ClotheType.StripedShirt]: StripedShirt,
+  [ClotheType.Turtleneck]: Turtleneck,
+  [ClotheType.HawaiianShirt]: HawaiianShirt,
+  [ClotheType.FootballJersey]: FootballJersey,
+  [ClotheType.Tuxedo]: Tuxedo,
+  [ClotheType.ShirtTie]: ShirtTie,
+  [ClotheType.Kimono]: Kimono,
+  [ClotheType.Armor]: Armor,
+  [ClotheType.SuperheroSuit]: SuperheroSuit,
+  [ClotheType.ChristmasSweater]: ChristmasSweater,
+  [ClotheType.ChefJacket]: ChefJacket
+}
 
 export default function Clothes () {
   const type = useContext(AvatarContext).clotheType ?? ClotheType.BlazerShirt
+  const Garment = newClothes[type]
+  if (Garment) return <Garment/>
   switch (type) {
     case ClotheType.BlazerShirt:
       return <BlazerShirt/>
@@ -32,5 +50,9 @@ export default function Clothes () {
       return <ShirtScoopNeck/>
     case ClotheType.ShirtVNeck:
       return <ShirtVNeck/>
+    case ClotheType.GameParkSweater:
+      return <GameParkSweater/>
+    default:
+      return null
   }
 }

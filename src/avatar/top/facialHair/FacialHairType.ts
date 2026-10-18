@@ -4,7 +4,14 @@ enum FacialHairType {
   BeardLight = 'BeardLight',
   BeardMajestic = 'BeardMajestic',
   MoustacheFancy = 'MoustacheFancy',
-  MoustacheMagnum = 'MoustacheMagnum'
+  MoustacheMagnum = 'MoustacheMagnum',
+  Goatee = 'Goatee',
+  MoustacheHandlebar = 'MoustacheHandlebar',
+  MoustacheChevron = 'MoustacheChevron',
+  MoustachePencil = 'MoustachePencil',
+  Sideburns = 'Sideburns',
+  Stubble = 'Stubble',
+  BeardViking = 'BeardViking'
 }
 
 export default FacialHairType
