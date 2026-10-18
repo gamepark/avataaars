@@ -5,7 +5,32 @@ enum AccessoriesType {
   Round = 'Round',
   Sunglasses = 'Sunglasses',
   Wayfarers = 'Wayfarers',
-  Kurt = 'Kurt'
+  Kurt = 'Kurt',
+  HeartGlasses = 'HeartGlasses',
+  Monocle = 'Monocle',
+  Aviators = 'Aviators',
+  HoopEarrings = 'HoopEarrings',
+  Headphones = 'Headphones',
+  StarGlasses = 'StarGlasses',
+  CatEyeGlasses = 'CatEyeGlasses',
+  HalfMoonGlasses = 'HalfMoonGlasses',
+  NerdGlasses = 'NerdGlasses',
+  Glasses3D = 'Glasses3D',
+  SkiGoggles = 'SkiGoggles',
+  SteampunkGoggles = 'SteampunkGoggles',
+  DominoMask = 'DominoMask',
+  MasqueradeMask = 'MasqueradeMask',
+  PirateEyePatch = 'PirateEyePatch',
+  ClownNose = 'ClownNose',
+  Freckles = 'Freckles',
+  Blush = 'Blush',
+  CheekBandage = 'CheekBandage',
+  WarPaint = 'WarPaint',
+  NoseRing = 'NoseRing',
+  PearlEarrings = 'PearlEarrings',
+  StudEarrings = 'StudEarrings',
+  VRHeadset = 'VRHeadset',
+  Scar = 'Scar'
 }
 
 export default AccessoriesType

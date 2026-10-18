@@ -12,7 +12,7 @@ export default function ClotheColor ({ maskID }: Props) {
   return <Color maskID={maskID} color={getClothColor(color)} fillRule='evenodd'/>
 }
 
-function getClothColor (color?: string) {
+export function getClothColor (color?: string) {
   if (color && color.startsWith('#')) return color
   switch (color) {
     case ClotheColorName.Black:

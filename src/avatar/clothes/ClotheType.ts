@@ -7,7 +7,19 @@ enum ClotheType {
   Overall = 'Overall',
   ShirtCrewNeck = 'ShirtCrewNeck',
   ShirtScoopNeck = 'ShirtScoopNeck',
-  ShirtVNeck = 'ShirtVNeck'
+  ShirtVNeck = 'ShirtVNeck',
+  GameParkSweater = 'GameParkSweater',
+  StripedShirt = 'StripedShirt',
+  Turtleneck = 'Turtleneck',
+  HawaiianShirt = 'HawaiianShirt',
+  FootballJersey = 'FootballJersey',
+  Tuxedo = 'Tuxedo',
+  ShirtTie = 'ShirtTie',
+  Kimono = 'Kimono',
+  Armor = 'Armor',
+  SuperheroSuit = 'SuperheroSuit',
+  ChristmasSweater = 'ChristmasSweater',
+  ChefJacket = 'ChefJacket'
 }
 
 export default ClotheType
