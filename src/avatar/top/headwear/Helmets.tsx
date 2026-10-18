@@ -10,7 +10,7 @@ const horn = (
   </>
 )
 
-export const VikingHelmet: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const VikingHelmet: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.None} hat={
     <>
       {horn}
@@ -27,7 +27,7 @@ export const VikingHelmet: FC<PropsWithChildren<PropsWithChildren>> = ({ childre
   }>{children}</Headwear>
 )
 
-export const HardHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const HardHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.None} hat={
     <>
       <path fill='#F4C430' d='M74,82 C74,44 100,22 132,22 C164,22 190,44 190,82 Z'/>

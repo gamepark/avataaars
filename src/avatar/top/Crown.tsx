@@ -1,7 +1,7 @@
 import ShortHairTheCaesar from './ShortHairTheCaesar'
 import { FC, useId, PropsWithChildren } from 'react'
 
-const Crown: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => {
+const Crown: FC<PropsWithChildren> = ({ children }) => {
   const filter1 = useId()
   return (
     <ShortHairTheCaesar>

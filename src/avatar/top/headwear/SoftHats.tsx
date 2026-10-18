@@ -5,7 +5,7 @@ import { Headwear, HeadwearBase, HatShape } from './Headwear'
 
 const bandana = 'M74,84 C74,46 100,30 132,30 C164,30 190,46 190,84 C170,89 94,89 74,84 Z'
 
-export const Bandana: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const Bandana: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.None} hat={
     <>
       <HatShape d='M188,74 L212,102 L202,108 L186,84 Z M190,76 L218,84 L216,94 L188,84 Z' defaultColor='#D6293B'/>
@@ -23,7 +23,7 @@ export const Bandana: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) 
 
 const beret = 'M66,70 C60,44 94,22 136,22 C178,22 204,42 196,66 C192,76 180,84 160,86 C140,88 112,88 94,88 C80,88 70,80 66,70 Z'
 
-export const Beret: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const Beret: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <HatShape d={beret} defaultColor='#2B3A55'/>
@@ -34,7 +34,7 @@ export const Beret: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) =>
   }>{children}</Headwear>
 )
 
-export const ChefHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const ChefHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <g transform='translate(0, 8)'>
@@ -47,7 +47,7 @@ export const ChefHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) 
   }>{children}</Headwear>
 )
 
-export const SantaHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const SantaHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <path fill='#D6293B' d='M76,78 C78,44 102,20 136,18 C170,18 196,40 210,72 L199,77 C190,58 178,48 166,46 C178,56 186,66 188,78 Z'/>

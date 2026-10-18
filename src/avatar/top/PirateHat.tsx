@@ -1,7 +1,7 @@
 import FacialHair from './facialHair'
 import { FC, useId, PropsWithChildren } from 'react'
 
-const PirateHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => {
+const PirateHat: FC<PropsWithChildren> = ({ children }) => {
   const filter1 = useId()
   return (
     <g strokeWidth='1' fillRule='evenodd'>

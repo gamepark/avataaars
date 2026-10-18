@@ -2,7 +2,7 @@ import FacialHair from './facialHair'
 import HairColor from './HairColor'
 import { FC, useId, PropsWithChildren } from 'react'
 
-const LongHairPonytail: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => {
+const LongHairPonytail: FC<PropsWithChildren> = ({ children }) => {
   const mask1 = useId()
   const mask2 = useId()
   const path1 = useId()

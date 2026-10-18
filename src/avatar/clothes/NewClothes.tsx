@@ -161,12 +161,16 @@ export function Tuxedo () {
 export function ShirtTie () {
   return (
     <g transform='translate(0, 170)'>
-      <Garment d={fullTorso} base='#F7F7F7' colored={false}>
-        {m => inside(m, <path fill='#000000' fillOpacity='0.06' d='M131,48 L133,48 L133,110 L131,110 Z'/>)}
+      <Garment d={crewNeck} base='#F7F7F7' colored={false}>
+        {m => <>
+          {neckShadow(m)}
+          {inside(m, <path fill='#000000' fillOpacity='0.06' d='M131.5,52 L133.5,52 L133.5,110 L131.5,110 Z'/>)}
+        </>}
       </Garment>
-      <path fill='#E6E6E6' d='M104,29 C104,36 110,44 118,52 L132,44 L114,26 Z M160,29 C160,36 154,44 146,52 L132,44 L150,26 Z'/>
-      <Garment d='M126,44 L138,44 L141,52 L136,56 L144,98 L132,110 L120,98 L128,56 L123,52 Z'>
-        {m => inside(m, <path fill='#000000' fillOpacity='0.16' d='M123,52 L141,52 L136,56 L128,56 Z'/>)}
+      <path fill='#E6E6E6' d='M99,29 L106,24 C110,36 120,45 132.5,48 L120,58 C108,52 100,42 99,29 Z M166,29 L159,24 C155,36 145,45 132.5,48 L145,58 C157,52 165,42 166,29 Z'/>
+      <path fill='#000000' fillOpacity='0.08' d='M120,58 L132.5,48 L145,58 L141,59 L132.5,52 L124,59 Z'/>
+      <Garment d='M126,46 L139,46 L141,55 L124,55 Z M125.5,55 L139.5,55 L146,96 L132.5,108 L119,96 Z'>
+        {m => inside(m, <path fill='#000000' fillOpacity='0.16' d='M124,52 L141,52 L141,55 L124,55 Z'/>)}
       </Garment>
     </g>
   )
@@ -175,11 +179,11 @@ export function ShirtTie () {
 export function Kimono () {
   return (
     <g transform='translate(0, 170)'>
-      <Garment d={fullTorso}>
+      <path fill='#F7F7F7' d='M100.2,43.5 L129.3,69.8 C130.8,71.1 133.2,71.1 134.7,69.8 L163.8,43.5 L160,39.5 L132.5,64 L104,39.5 Z'/>
+      <Garment d={vNeck}>
         {m => inside(m, <>
-          <path fill='#F7F7F7' d='M110,29 L154,29 L132,64 Z'/>
-          <path fill='#000000' fillOpacity='0.2' d='M98,30 L108,29 L156,94 L146,100 Z'/>
-          <path fill='#000000' fillOpacity='0.12' d='M166,30 L156,29 L132,62 L138,68 Z'/>
+          <path fill='#000000' fillOpacity='0.24' d='M92.7,29.9 C93.6,35 96.1,39.8 100.2,43.5 L129.3,69.8 L123.5,76 L94,49.5 C89,44.5 86.5,37.5 86,30.6 Z'/>
+          <path fill='#000000' fillOpacity='0.3' d='M171.3,29.9 L178,30.6 C177.5,37.5 175,44.5 170,49.5 L124,92 L118,86 L163.8,43.5 C168.4,38.8 170.5,34.5 171.3,29.9 Z'/>
           <path fill='#262E33' d='M32,92 L232,92 L232,110 L32,110 Z'/>
           <path fill='#E0464F' d='M32,96 L232,96 L232,100 L32,100 Z'/>
         </>)}
@@ -188,14 +192,18 @@ export function Kimono () {
   )
 }
 
+// Stand collar hugging the crew neck opening
+const standCollar = 'M99,29.2 C99,42.2 114,51.8 132.5,51.8 C151,51.8 166,42.2 166,29.3 L160,26 C159,37 147,45 132.5,45 C118,45 106,37 105,26 Z'
+const standCollarShade = 'M99,29.2 C99,42.2 114,51.8 132.5,51.8 C151,51.8 166,42.2 166,29.3 L165,33 C162,44 149,53.5 132.5,53.5 C116,53.5 103,44 100,33 Z'
+
 export function Armor () {
   return (
     <g transform='translate(0, 170)'>
-      <Garment d={fullTorso} base='#9AA5AD' colored={false}>
+      <Garment d={crewNeck} base='#9AA5AD' colored={false}>
         {m => inside(m, <>
-          <path fill='#FFFFFF' fillOpacity='0.2' d='M120,40 L130,40 L130,110 L112,110 Z'/>
-          <path fill='#000000' fillOpacity='0.12' d='M134,40 L144,40 L152,110 L134,110 Z'/>
-          <path fill='#7C878F' d='M80,70 C110,62 154,62 184,70 L184,74 C154,66 110,66 80,74 Z M78,88 C110,80 154,80 186,88 L186,92 C154,84 110,84 78,92 Z'/>
+          <path fill='#FFFFFF' fillOpacity='0.2' d='M120,52 L130,52 L130,110 L112,110 Z'/>
+          <path fill='#000000' fillOpacity='0.12' d='M135,52 L145,52 L153,110 L135,110 Z'/>
+          <path fill='#7C878F' d='M80,72 C110,64 154,64 184,72 L184,76 C154,68 110,68 80,76 Z M78,90 C110,82 154,82 186,90 L186,94 C154,86 110,86 78,94 Z'/>
           <ellipse fill='#7C878F' cx='56' cy='62' rx='30' ry='24'/>
           <ellipse fill='#7C878F' cx='208' cy='62' rx='30' ry='24'/>
           <ellipse fill='#FFFFFF' fillOpacity='0.15' cx='52' cy='54' rx='16' ry='8'/>
@@ -203,7 +211,9 @@ export function Armor () {
           <g fill='#C9D1D6'><circle cx='50' cy='72' r='2'/><circle cx='64' cy='76' r='2'/><circle cx='214' cy='72' r='2'/><circle cx='200' cy='76' r='2'/></g>
         </>)}
       </Garment>
-      <path fill='#7C878F' d='M104,29 C106,38 118,46 132,46 C146,46 158,38 160,29 L166,31 C164,44 150,54 132,54 C114,54 100,44 98,31 Z'/>
+      <path fill='#7C878F' d={standCollar}/>
+      <path fill='#000000' fillOpacity='0.16' d={standCollarShade}/>
+      <g fill='#C9D1D6'><circle cx='112' cy='42' r='1.6'/><circle cx='132.5' cy='48.5' r='1.6'/><circle cx='153' cy='42' r='1.6'/></g>
     </g>
   )
 }
@@ -253,16 +263,19 @@ export function ChristmasSweater () {
 export function ChefJacket () {
   return (
     <g transform='translate(0, 170)'>
-      <Garment d={fullTorso} base='#F7F7F7' colored={false}>
-        {m => inside(m, <>
-          <path fill='#000000' fillOpacity='0.06' d='M146,40 L150,40 L150,110 L146,110 Z'/>
-          <g fill='#C9D1D6'>
-            {[58, 74, 90].map(y => <g key={y}><circle cx='122' cy={y} r='2.6'/><circle cx='160' cy={y} r='2.6'/></g>)}
-          </g>
-        </>)}
+      <Garment d={crewNeck} base='#F7F7F7' colored={false}>
+        {m => <>
+          {neckShadow(m)}
+          {inside(m, <>
+            <path fill='#000000' fillOpacity='0.07' d='M146,50 L149,50 L149,110 L146,110 Z'/>
+            <g fill='#C9D1D6'>
+              {[64, 78, 92].map(y => <g key={y}><circle cx='122' cy={y} r='2.6'/><circle cx='160' cy={y} r='2.6'/></g>)}
+            </g>
+          </>)}
+        </>}
       </Garment>
-      <path fill='#EBEBEB' d='M104,29 C106,40 118,48 132,48 C146,48 158,40 160,29 L164,30 L164,40 C156,50 146,54 132,54 C118,54 108,50 100,40 L100,30 Z'/>
-      <path fill='#000000' fillOpacity='0.08' d='M100,38 C108,48 118,52 132,52 C146,52 156,48 164,38 L164,40 C156,50 146,54 132,54 C118,54 108,50 100,40 Z'/>
+      <path fill='#EBEBEB' d={standCollar}/>
+      <path fill='#000000' fillOpacity='0.08' d={standCollarShade}/>
     </g>
   )
 }

@@ -1,9 +1,9 @@
 import { FC, PropsWithChildren } from 'react'
-import { Headwear, HeadwearBase, mirror } from './Headwear'
+import { Headwear, HeadwearBase, HatShape, mirror } from './Headwear'
 
 // Playful headwear resting on short hair: party hat, flower crown, halo, devil horns, cat ears, bunny ears
 
-export const PartyHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const PartyHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} lift={0} hat={
     <>
       <path fill='#5199E4' d='M108,42 L142,6 L158,40 C142,46 122,46 108,42 Z'/>
@@ -24,7 +24,7 @@ const flower = (cx: number, cy: number, color: string) => (
   </g>
 )
 
-export const FlowerCrown: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const FlowerCrown: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Long} lift={0} hat={
     <>
       <g fill='#4CAF50'>
@@ -39,7 +39,7 @@ export const FlowerCrown: FC<PropsWithChildren<PropsWithChildren>> = ({ children
   }>{children}</Headwear>
 )
 
-export const Halo: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const Halo: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} lift={0} hat={
     <>
       <ellipse fill='none' stroke='#FFE57A' strokeOpacity='0.45' strokeWidth='9' cx='132' cy='16' rx='38' ry='8'/>
@@ -55,7 +55,7 @@ const devilHorn = (
   </>
 )
 
-export const DevilHorns: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const DevilHorns: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} lift={0} hat={
     <>
       {devilHorn}
@@ -66,15 +66,15 @@ export const DevilHorns: FC<PropsWithChildren<PropsWithChildren>> = ({ children 
 
 const catEar = (
   <>
-    <path fill='#262E33' d='M80,54 L86,14 L118,36 Z'/>
-    <path fill='#FF9EB8' d='M88,44 L91,25 L107,37 Z'/>
+    <HatShape d='M84,62 L86,8 L122,42 Z' defaultColor='#262E33'/>
+    <path fill='#FF9EB8' d='M93,50 L93.5,24 L112,42 Z'/>
+    <path fill='#000000' fillOpacity='0.16' d='M84,62 L86,8 L90,12 L89,58 Z'/>
   </>
 )
 
-export const CatEars: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const CatEars: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} lift={0} hat={
     <>
-      <path fill='none' stroke='#262E33' strokeWidth='4' d='M80,62 C88,40 108,30 132,30 C156,30 176,40 184,62'/>
       {catEar}
       <g transform={mirror}>{catEar}</g>
     </>
@@ -88,12 +88,11 @@ const bunnyEar = (
   </g>
 )
 
-export const BunnyEars: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const BunnyEars: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} lift={0} hat={
     <>
       {bunnyEar}
       <g transform={mirror}>{bunnyEar}</g>
-      <path fill='none' stroke='#F7F7F7' strokeWidth='4' d='M80,62 C88,40 108,30 132,30 C156,30 176,40 184,62'/>
     </>
   }>{children}</Headwear>
 )

@@ -42,7 +42,7 @@ export function MoustachePencil () {
   return <Hair d='M110,146 C118,142.5 127,142.5 132,144 C137,142.5 146,142.5 154,146 C146,146.6 139,146.6 132,146 C125,146.6 118,146.6 110,146 Z'/>
 }
 
-const sideburnHalf = 'M76,90 L91,90 C91,108 92,126 93,144 C90,147 86,148 82,146 C79,128 77,108 76,90 Z'
+const sideburnHalf = 'M76,86 L85,86 C85,98 85.5,111 86,123 C83.5,125.5 80,126 77,125 C76.5,112 76,99 76,86 Z'
 
 export function Sideburns () {
   return <Hair d={sideburnHalf + ' ' + mirrorX(sideburnHalf)}/>

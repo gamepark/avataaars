@@ -4,7 +4,7 @@ import { FC, useId, PropsWithChildren } from 'react'
 
 const star = 'M0,-6 L1.8,-1.9 L6,-1.6 L2.8,1.2 L3.8,5.4 L0,3.1 L-3.8,5.4 L-2.8,1.2 L-6,-1.6 L-1.8,-1.9 Z'
 
-const WizardHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => {
+const WizardHat: FC<PropsWithChildren> = ({ children }) => {
   const filter1 = useId()
   const mask1 = useId()
   const path1 = useId()

@@ -3,7 +3,7 @@ import { Headwear, HeadwearBase, HatShape } from './Headwear'
 
 // Structured hats: top hat, bowler, cowboy, sombrero, fez, graduation cap
 
-export const TopHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const TopHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <HatShape d='M80,16 C108,12 156,12 184,16 L186,80 C156,84 108,84 78,80 Z' defaultColor='#262E33'/>
@@ -16,7 +16,7 @@ export const TopHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) =
   }>{children}</Headwear>
 )
 
-export const BowlerHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const BowlerHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <HatShape d='M76,80 C76,40 100,20 132,20 C164,20 188,40 188,80 Z' defaultColor='#262E33'/>
@@ -28,7 +28,7 @@ export const BowlerHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }
   }>{children}</Headwear>
 )
 
-export const CowboyHat: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const CowboyHat: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <path fill='#A0642E' d='M76,82 C74,52 90,18 112,16 C122,15 126,24 132,24 C138,24 142,15 152,16 C174,18 190,52 188,82 Z'/>
@@ -53,7 +53,7 @@ const zigzag = (() => {
   return 'M' + top.join(' L') + ' L' + bottom.join(' L') + ' Z'
 })()
 
-export const Sombrero: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const Sombrero: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <path fill='#E7B85C' d='M78,76 C76,40 100,10 132,10 C164,10 188,40 186,76 Z'/>
@@ -66,7 +66,7 @@ export const Sombrero: FC<PropsWithChildren<PropsWithChildren>> = ({ children })
   }>{children}</Headwear>
 )
 
-export const Fez: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const Fez: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.None} hat={
     <>
       <path fill='#C0262E' d='M76,84 L98,16 C118,12 146,12 166,16 L188,84 C160,90 104,90 76,84 Z'/>
@@ -79,7 +79,7 @@ export const Fez: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
   }>{children}</Headwear>
 )
 
-export const GraduationCap: FC<PropsWithChildren<PropsWithChildren>> = ({ children }) => (
+export const GraduationCap: FC<PropsWithChildren> = ({ children }) => (
   <Headwear base={HeadwearBase.Short} hat={
     <>
       <path fill='#262E33' d='M74,84 C74,54 100,42 132,42 C164,42 190,54 190,84 C168,89 96,89 74,84 Z'/>
